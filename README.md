@@ -4,8 +4,6 @@
 
 <br>
 
-Welcome, this is our project for [Scaling Ethereum Hackathon](https://ethglobal.com/events/scaling2023).
-
 # IMPORTANT!
 
 ## Application:
@@ -63,40 +61,40 @@ All messages, assets and files that are sent from one chain to another are sent 
    - X-Chat Address:
      - Gnosis Explorer Contract Address: [0x4B50927d34b94Da4cD23c34c7Ce0a77469273fCE](https://gnosisscan.io/address/0x4B50927d34b94Da4cD23c34c7Ce0a77469273fCE)
    - Contract File: [FILE](./Contracts/Xchat-crosschain.sol)
--Optimism:
+- Optimism:
    - Sending messages, files and USDC to all chains compatible with Connext.
    - X-Chat Address:
-     - Optimism Explorer Contract Address: [0x423dB5c61bf3a0D140D8b2cDEe83617A32e56471](https://optimistic.etherscan.io/address/0x423dB5c61bf3a0D140D8b2cDEe83617A32e56471)
+     - Optimism Explorer Contract Address:  [0x423dB5c61bf3a0D140D8b2cDEe83617A32e56471](https://optimistic.etherscan.io/address/0x423dB5c61bf3a0D140D8b2cDEe83617A32e56471)
    - Contract File: [FILE](./Contracts/Xchat-crosschain.sol)
--Polygon
+- Polygon
    - Sending messages, files and USDC to all chains compatible with Connext.
    - X-Chat Address:
-     - Polygon Explorer Contract Address: [0xb3112D34958e6Fe3aeC0052b7d845f396aE22049](https://polygonscan.com/address/0xb3112D34958e6Fe3aeC0052b7d845f396aE22049)
+     - Polygon Explorer Contract Address:  [0xb3112D34958e6Fe3aeC0052b7d845f396aE22049](https://polygonscan.com/address/0xb3112D34958e6Fe3aeC0052b7d845f396aE22049)
    - Contract File: [FILE](./Contracts/Xchat-crosschain.sol)
 - Arbitrum
    - Sending messages, files and USDC to all chains compatible with Connext.
    - X-Chat Address:
-     - Arbitrum Explorer Contract Address: [0x423dB5c61bf3a0D140D8b2cDEe83617A32e56471](https://arbiscan.io/address/0x423dB5c61bf3a0D140D8b2cDEe83617A32e56471)
+     - Arbitrum Explorer Contract Address:  [0x423dB5c61bf3a0D140D8b2cDEe83617A32e56471](https://arbiscan.io/address/0x423dB5c61bf3a0D140D8b2cDEe83617A32e56471)
    - Contract File: [FILE](./Contracts/Xchat-crosschain.sol)
--BNB:
+- BNB:
    - Sending messages, files and USDC to all chains compatible with Connext.
    - X-Chat Address:
-     - BNB Explorer Contract Address:[0x423dB5c61bf3a0D140D8b2cDEe83617A32e56471](https://bscscan.com/address/0x423dB5c61bf3a0D140D8b2cDEe83617A32e56471)
+     - BNB Explorer Contract Address: [0x423dB5c61bf3a0D140D8b2cDEe83617A32e56471](https://bscscan.com/address/0x423dB5c61bf3a0D140D8b2cDEe83617A32e56471)
    - Contract File: [FILE](./Contracts/Xchat-crosschain.sol)
--Scroll
+- Scroll
    - Sending messages, files and USDC to the same secure and efficient chain thanks to the ZK incorporated into the network.
    - X-Chat Address:
-     - Scroll Explorer Contract Address:[0x5589Ca69a02277af6019e6007D876095F1320F28](https://blockscout.scroll.io/address/0x5589Ca69a02277af6019e6007D876095F1320F28)
+     - Scroll Explorer Contract Address: [0x5589Ca69a02277af6019e6007D876095F1320F28](https://blockscout.scroll.io/address/0x5589Ca69a02277af6019e6007D876095F1320F28)
    - Contract File: [FILE](./Contracts/Xchat-onchain.sol)
--Taiko
+- Taiko
    - Sending messages, files and USDC to the same secure and efficient chain thanks to the ZK incorporated into the network.
    - X-Chat Address:
-     - Taiko Explorer Contract Address:[0x512Db9Ac59639AccEB521918cdFbdEA49a0A6A73](https://explorer.a2.taiko.xyz/address/0x512Db9Ac59639AccEB521918cdFbdEA49a0A6A73)
+     - Taiko Explorer Contract Address: [0x512Db9Ac59639AccEB521918cdFbdEA49a0A6A73](https://explorer.a2.taiko.xyz/address/0x512Db9Ac59639AccEB521918cdFbdEA49a0A6A73)
    - Contract File: [FILE](./Contracts/Xchat-onchain.sol)
 - Mantle:
-   - Sending messages, files and USDC to the same secure and efficient chain thanks to the ZK incorporated into the network.
+   - Sending messages, files and WETH to the same secure and efficient chain thanks to the ZK incorporated into the network.
    - X-Chat Address:
-     - Mantle Explorer Contract Address:[0x512Db9Ac59639AccEB521918cdFbdEA49a0A6A73](https://explorer.testnet.mantle.xyz/address/0x512Db9Ac59639AccEB521918cdFbdEA49a0A6A73)
+     - Mantle Explorer Contract Address: [0x512Db9Ac59639AccEB521918cdFbdEA49a0A6A73](https://explorer.testnet.mantle.xyz/address/0x512Db9Ac59639AccEB521918cdFbdEA49a0A6A73)
    - Contract File: [FILE](./Contracts/Xchat-onchain.sol)
 - ChainSafe (Filecoin):
    - Upload files to IPFS through Chainsafe API.
@@ -113,7 +111,7 @@ Within the crosschain capabilities, the most important in our opinion is the fac
 
 Finally, thinking about the performance of the app, a simple design was sought that could easily run on cell phones from high-end to low-intermediate range.
 
-<img src="https://i.ibb.co/x37YKM0/screenshot.png">
+<img src="https://i.ibb.co/hFXTmbX/vlcsnap-2023-03-25-04h14m07s961.png">
 
 # Connext:
 
@@ -291,7 +289,17 @@ Here are some screenshots of our UI and how we send messages, files and show the
 
 # Polygon
 
+Al ser una de las Chains mas populares y con un enorme flujo de transacciones por minuto, es normal pensar que se puede utilizar para interactuar con otras chains a travez de mandar stablecoins como USDC o solo tener una amena conversacion entre amigos con un costo muy bajo por transaccion.
 
+<img src="https://i.ibb.co/dc7Kwmh/image.png">
+
+- X-Chat Address:
+  - Polygon Explorer Contract Address:  [0xb3112D34958e6Fe3aeC0052b7d845f396aE22049](https://polygonscan.com/address/0xb3112D34958e6Fe3aeC0052b7d845f396aE22049)
+- Contract File: [FILE](./Contracts/Xchat-crosschain.sol)
+
+En esta red fue muy notorio que el costo por transaccion e incluso las transacciones crosschain era muy rapidas y de costo muy bajo, esto podia verse afectado si la red estaba muy congestionada, pero al ser una layer 2 con buena velocidad esto es raro que ocurra.
+
+<img src="https://i.ibb.co/4J76pCv/New-Project-6.png">
 
 # Current state and what's next:
 
