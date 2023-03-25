@@ -24,6 +24,8 @@ X-Chat Wallet/Dapp APK: [LINK](./Xchat-APK/app-release.apk)
 
 - Taiko : [Click Here](#taiko)
 
+- Polygon : [Click Here](#polygon)
+
 ## Here is our main demo video: 
 
 [![Demo](https://i.ibb.co/g4W3ypx/image.png)](pending)
