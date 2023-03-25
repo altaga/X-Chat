@@ -291,7 +291,7 @@ Here are some screenshots of our UI and how we send messages, files and show the
 
 # Polygon
 
-Al ser una de las Chains mas populares y con un enorme flujo de transacciones por minuto, es normal pensar que se puede utilizar para interactuar con otras chains a travez de mandar stablecoins como USDC o solo tener una amena conversacion entre amigos con un costo muy bajo por transaccion.
+Being one of the most popular Chains and with a huge flow of transactions per minute, it is normal to think that it can be used to interact with other chains by sending stablecoins such as USDC or just having a pleasant conversation with friends at a very low cost. per transaction.
 
 <img src="https://i.ibb.co/dc7Kwmh/image.png">
 
@@ -299,7 +299,7 @@ Al ser una de las Chains mas populares y con un enorme flujo de transacciones po
   - Polygon Explorer Contract Address:  [0xb3112D34958e6Fe3aeC0052b7d845f396aE22049](https://polygonscan.com/address/0xb3112D34958e6Fe3aeC0052b7d845f396aE22049)
 - Contract File: [FILE](./Contracts/Xchat-crosschain.sol)
 
-En esta red fue muy notorio que el costo por transaccion e incluso las transacciones crosschain era muy rapidas y de costo muy bajo, esto podia verse afectado si la red estaba muy congestionada, pero al ser una layer 2 con buena velocidad esto es raro que ocurra.
+In this network it was very noticeable that the cost per transaction and even crosschain transactions were very fast and very low cost, this could be affected if the network was very congested, but being a layer 2 with good speed this is a rare occurrence .
 
 <img src="https://i.ibb.co/4J76pCv/New-Project-6.png">
 
