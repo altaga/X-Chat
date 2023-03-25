@@ -8,15 +8,23 @@ Welcome, this is our project for [Scaling Ethereum Hackathon](https://ethglobal.
 
 # IMPORTANT!
 
-## Applications:
+## Application:
 
 X-Chat Wallet/Dapp APK: [LINK](./Xchat-APK/app-release.apk)
 
-## Services:
+## Services and Chains:
 
-Connext: [Click Here](#connext)
+- Connext: [Click Here](#connext)
 
+- Gnosis : [Click Here](#gnosis)
 
+- Scroll : [Click Here](#scroll)
+
+- Optimism : [Click Here](#optimism)
+
+- Mantle : [Click Here](#mantle)
+
+- Taiko : [Click Here](#taiko)
 
 ## Here is our main demo video: 
 
@@ -33,7 +41,6 @@ Whether you're an investor looking to move assets between different chains or a 
 With our user-friendly interface and cutting-edge technology, X-Chat offers a secure and efficient way to chat and transact across chains. Our platform is built on the latest blockchain infrastructure, ensuring fast and reliable transactions at all times.
 
 So, whether you're a seasoned blockchain enthusiast or new to the world of decentralized applications, X-Chat is the perfect platform for you to connect with others and explore the endless possibilities of the blockchain ecosystem.
-
 
 # System's Architecture:
 
@@ -90,6 +97,140 @@ Todos los mensajes, assets y archivos que se mandan de una chain a otra son mand
   - Subida de archivos a IPFS atravez de Chainsafe API.
 
 # X-Chat React Natve DApp:
+
+
+
+# Connext:
+
+Todas las transacciones que requieren comunicarse de una chain a otra usan the [Connext SDK](https://www.npmjs.com/package/@connext/smart-contracts) esta implementacion esta en el contrato [Xchat-crosschain](Contracts/Xchat-crosschain.sol).
+
+<img src="https://i.ibb.co/8d52WsP/scheme-drawio-2.png">
+
+Antes de mandar el mensaje, tenemos que obtener un relayerFee el cual tenemos que mandar como value dentro de nuestra transaccion para que la transferencia se exitosa, el script para obtener el relayer fee es el siguiente.
+
+    const sdkConfig = {
+            network: "mainnet",
+            chains: {
+                6648936: {
+                    providers: ["https://api.securerpc.com/v1"],
+                },
+                1869640809: {
+                    providers: ["https://mainnet.optimism.io"],
+                },
+                1886350457: {
+                    providers: ["https://arbitrum-one.public.blastapi.io"],
+                },
+                1634886255: {
+                    providers: ["https://arbitrum-one.public.blastapi.io"],
+                },
+                6450786: {
+                    providers: ["https://bsc-dataseed1.defibit.io"],
+                },
+                6778479: {
+                    providers: ["https://rpc.gnosis.gateway.fm"],
+                }
+            },
+        };
+        const { sdkBase } = await create(sdkConfig);
+        const originDomain = chainIn.toString();
+        const destinationDomain = chainOut.toString();
+        // Estimate the relayer fee
+        try{
+            const relayerFee = await sdkBase.estimateRelayerFee({
+                originDomain,
+                destinationDomain
+            })
+            return (relayerFee.toString())
+        }
+        catch{
+            return("0")
+        }
+
+El flujo de envio del mensaje es llamar la funcion sendMessageX desde el contrato desplegado en la chain de origen.
+
+    function sendMessageX(
+        address target,
+        uint32 destinationDomain,
+        address _to,
+        string memory _message,
+        uint256 relayerFee,
+        uint256 _amount,
+        address _token
+    ) external payable {
+        bytes memory callData = abi.encode(
+            msg.sender,
+            _to,
+            _message,
+            _amount,
+            _token
+        );
+        connext.xcall{value: relayerFee}(
+            destinationDomain, // _destination: Domain ID of the destination chain
+            target, // _to: address of the target contract
+            address(0), // _asset: address of the token contract
+            msg.sender, // _delegate: address that can revert or forceLocal on destination
+            0, // _amount: amount of tokens to transfer
+            0, // _slippage: max slippage the user will accept in BPS (e.g. 300 = 3%)
+            callData // _callData: the encoded calldata to send
+        );
+    }
+
+Posteriormente al llamar a xcall mandara esta informacion desde la chain origen a la chain destino, la cual tiene implementado en su propio contrato un xReciever, el cual procesara la llamada y en nuestro caso agregara el mensaje a el historial.
+
+    function xReceive(
+        bytes32 _transferId,
+        uint256 _amount,
+        address _asset,
+        address _originSender,
+        uint32 _origin,
+        bytes memory _callData
+    ) external returns (bytes memory) {
+        (   
+        address _from,
+        address _to,
+        string memory _message,
+        uint256 amount,
+        address token
+        ) = abi.decode(_callData, (address, address, string, uint256, address));
+        addMessageX(_from, _to, _message, _origin, amount, token);
+        return "ok";
+    }
+
+Finalmente la comunicacion puede resumirse en el siguiente esquema.
+
+<img src="https://i.ibb.co/hRbqbgy/scheme-Connext-drawio.png">
+
+Todas las transacciones que mostramos en los demos pueden revisarlas en el Connext Explorer.
+
+https://connextscan.io/address/0x2A9EF6632842f2FB3da32Ac0A558B3b7062C0F13
+
+# Gnosis:
+
+En nuestro desarrollo utilizamos Gnosis MAINNET, ya que permite a nuestra aplicacion tener una layer segura y con una token nativa estable, en este caso el xDai, para nuestra aplicacion es muy benefico poder mantener las tarrifas bajas al mandar mensajes o USDC tokens desde Gnosis a cualquiera de las otras chains en Connext o a la misma chain.
+
+
+
+- X-Chat Address:
+  - Gnosis Explorer Contract Address: [0x4B50927d34b94Da4cD23c34c7Ce0a77469273fCE](https://gnosisscan.io/address/0x4B50927d34b94Da4cD23c34c7Ce0a77469273fCE)
+- Contract File: [FILE](./Contracts/Xchat-crosschain.sol)
+
+En las siguientes pantallas de nuestra app, podemos ver el costo por mensaje dentro de la misma chain es menor a 1 centavo de dolar y 6 centavos en una transaccion crosschain con polygon.
+
+<img src="https://i.ibb.co/JtWSxpd/New-Project-1.png">
+
+# Scroll:
+
+
+
+# Optimism:
+
+
+
+# Mantle:
+
+
+
+# Taiko:
 
 
 
