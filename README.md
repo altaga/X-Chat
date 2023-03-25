@@ -101,7 +101,7 @@ All messages, assets and files that are sent from one chain to another are sent 
 - ChainSafe (Filecoin):
    - Upload files to IPFS through Chainsafe API.
 
-# X-Chat React Natve DApp:
+# X-Chat React Native DApp:
 
 X-Chat is a very complete Dapp, which provides us with all the wallet and chat services. Not to mention its ability to perform crosschain operations.
 
