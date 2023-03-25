@@ -1,4 +1,4 @@
-# X-Chat  [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](./LICENSE) [<img src="https://img.shields.io/badge/View-Video-red">](pending)
+# X-Chat  [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](./LICENSE) [<img src="https://img.shields.io/badge/View-Video-red">](https://youtu.be/WR2abImBU4Q)
 
 <img src="https://i.ibb.co/BcFfwVX/xchat-logos.png" width="60%">
 
@@ -28,7 +28,7 @@ X-Chat Wallet/Dapp APK: [LINK](./Xchat-APK/app-release.apk)
 
 ## Here is our main demo video: 
 
-[![Demo](https://i.ibb.co/g4W3ypx/image.png)](pending)
+[![Demo](https://i.ibb.co/g4W3ypx/image.png)](https://youtu.be/WR2abImBU4Q)
 
 # Introduction and Problem:
 
