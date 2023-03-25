@@ -98,7 +98,9 @@ Todos los mensajes, assets y archivos que se mandan de una chain a otra son mand
 
 # X-Chat React Natve DApp:
 
+X-Chat es una Dapp muy completa, que nos provee todos los servicios de wallet y de chat. Sin mencionar su capacidad de realizar operaciones crosschain.
 
+<img src="https://i.ibb.co/LQBLQNn/screen1.png">
 
 # Connext:
 
