@@ -208,7 +208,7 @@ https://connextscan.io/address/0x2A9EF6632842f2FB3da32Ac0A558B3b7062C0F13
 
 En nuestro desarrollo utilizamos Gnosis MAINNET, ya que permite a nuestra aplicacion tener una layer segura y con una token nativa estable, en este caso el xDai, para nuestra aplicacion es muy benefico poder mantener las tarrifas bajas al mandar mensajes o USDC tokens desde Gnosis a cualquiera de las otras chains en Connext o a la misma chain.
 
-
+<img src="https://i.ibb.co/G2DPP8y/image.png">
 
 - X-Chat Address:
   - Gnosis Explorer Contract Address: [0x4B50927d34b94Da4cD23c34c7Ce0a77469273fCE](https://gnosisscan.io/address/0x4B50927d34b94Da4cD23c34c7Ce0a77469273fCE)
