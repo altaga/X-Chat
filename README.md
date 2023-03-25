@@ -211,7 +211,7 @@ En nuestro desarrollo utilizamos Gnosis MAINNET, ya que permite a nuestra aplica
 <img src="https://i.ibb.co/G2DPP8y/image.png">
 
 - X-Chat Address:
-  - Gnosis Explorer Contract Address: [0x4B50927d34b94Da4cD23c34c7Ce0a77469273fCE](https://gnosisscan.io/address/0x4B50927d34b94Da4cD23c34c7Ce0a77469273fCE)
+  - Gnosis Explorer Contract Address:  [0x4B50927d34b94Da4cD23c34c7Ce0a77469273fCE](https://gnosisscan.io/address/0x4B50927d34b94Da4cD23c34c7Ce0a77469273fCE)
 - Contract File: [FILE](./Contracts/Xchat-crosschain.sol)
 
 En las siguientes pantallas de nuestra app, podemos ver el costo por mensaje dentro de la misma chain es menor a 1 centavo de dolar y 6 centavos en una transaccion crosschain con polygon.
@@ -225,7 +225,7 @@ Scroll tiene un beneficio muy grande para nuestra aplicacion de X-Chat, ya que a
 <img src="https://i.ibb.co/ry2w8RZ/image.png">
 
 - X-Chat Address:
-  - Scroll Explorer Contract Address: [0x5589Ca69a02277af6019e6007D876095F1320F28](https://blockscout.scroll.io/address/0x5589Ca69a02277af6019e6007D876095F1320F28)
+  - Scroll Explorer Contract Address:  [0x5589Ca69a02277af6019e6007D876095F1320F28](https://blockscout.scroll.io/address/0x5589Ca69a02277af6019e6007D876095F1320F28)
 - Contract File: [FILE](./Contracts/Xchat-onchain.sol)
 
 Como mencionamos los costos por mandar mensajes por Scroll es bastante bajo, aqui un screen shot mostrando algunos costos por transaccion los cuales no suelen ser mayores de 0.0008 dolares.
@@ -253,7 +253,7 @@ La red de Mantle nos ofrecio una arquitectura con bajas fees y alta seguridad, a
 <img src="https://i.ibb.co/5c8pGnd/image.png">
 
 - X-Chat Address:
-    - Mantle Explorer Contract Address:[0x512Db9Ac59639AccEB521918cdFbdEA49a0A6A73](https://explorer.testnet.mantle.xyz/address/0x512Db9Ac59639AccEB521918cdFbdEA49a0A6A73)
+    - Mantle Explorer Contract Address: [0x512Db9Ac59639AccEB521918cdFbdEA49a0A6A73](https://explorer.testnet.mantle.xyz/address/0x512Db9Ac59639AccEB521918cdFbdEA49a0A6A73)
   - Contract File: [FILE](./Contracts/Xchat-onchain.sol)
 
 La red nos ofrecio buena velocidad al mandar mensajes y un costo muy bajo en las trasacciones 
@@ -262,17 +262,17 @@ La red nos ofrecio buena velocidad al mandar mensajes y un costo muy bajo en las
 
 # Taiko:
 
-Scroll tiene un beneficio muy grande para nuestra aplicacion de X-Chat, ya que al utilizarla pudimos obtener velocidades presumibles de 3 segundos entre mensaje y mensaje, ademas de poder mandar rapidamente USDC sobre la misma red rapidamente.
+Para el uso de Taiko, se puso especial atencion en la UI/UX del proyecto, ya que es algo que muchas aplicaciones, cuando estan muy enfocadas en developers suelen carecer, asi que se procuro realizar una interfaz sencilla para poder mandar mensajes sobre la red de Taiko y a su vez uno de sus ERC20 Tokens BLL.
 
-<img src="https://i.ibb.co/ry2w8RZ/image.png">
+<img src="https://i.ibb.co/N3NwBGR/image.png">
 
 - X-Chat Address:
-  - Scroll Explorer Contract Address: [0x5589Ca69a02277af6019e6007D876095F1320F28](https://blockscout.scroll.io/address/0x5589Ca69a02277af6019e6007D876095F1320F28)
+  - Taiko Explorer Contract Address: [0x512Db9Ac59639AccEB521918cdFbdEA49a0A6A73](https://explorer.a2.taiko.xyz/address/0x512Db9Ac59639AccEB521918cdFbdEA49a0A6A73)
 - Contract File: [FILE](./Contracts/Xchat-onchain.sol)
 
-Como mencionamos los costos por mandar mensajes por Scroll es bastante bajo, aqui un screen shot mostrando algunos costos por transaccion los cuales no suelen ser mayores de 0.0008 dolares.
+Aqui algunos screenhots de nuestra UI y como mandamos mensajes, archivos y mostramos el balance de nuestra wallet.
 
-<img src="https://i.ibb.co/7N4GWfH/New-Project-2.png">
+<img src="https://i.ibb.co/BtQhF0z/New-Project-5.png">
 
 # Current state and what's next:
 
