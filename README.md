@@ -234,15 +234,45 @@ Como mencionamos los costos por mandar mensajes por Scroll es bastante bajo, aqu
 
 # Optimism:
 
+Para la red de Optimism quisimos atacar un problema directamente que ellos bucan, que es el crear una UI y protocolo, para el address to address messaging y el contrato esta desplegado en MAINNET.
 
+<img src="https://i.ibb.co/3sSnqNf/Whats-App-Image-2023-03-23-at-01-57-19.jpg">
+
+- X-Chat Address:
+  - Optimism MAINNET Explorer Contract Address: [0x423dB5c61bf3a0D140D8b2cDEe83617A32e56471](https://optimistic.etherscan.io/address/0x423dB5c61bf3a0D140D8b2cDEe83617A32e56471)
+- Contract File: [FILE](./Contracts/Xchat-crosschain.sol)
+
+Algo muy resaltable de Optimism fue los costos por transaccion que nos ofrecia para mandar los mensajes sobre la misma chain y crosschain, no superando los 0.0008 usd y los 0.0023 usd respectivamente.
+
+<img src="https://i.ibb.co/pnSVrrQ/New-Project-3.png">
 
 # Mantle:
 
+Scroll tiene un beneficio muy grande para nuestra aplicacion de X-Chat, ya que al utilizarla pudimos obtener velocidades presumibles de 3 segundos entre mensaje y mensaje, ademas de poder mandar rapidamente USDC sobre la misma red rapidamente.
 
+<img src="https://i.ibb.co/ry2w8RZ/image.png">
+
+- X-Chat Address:
+  - Scroll Explorer Contract Address: [0x5589Ca69a02277af6019e6007D876095F1320F28](https://blockscout.scroll.io/address/0x5589Ca69a02277af6019e6007D876095F1320F28)
+- Contract File: [FILE](./Contracts/Xchat-onchain.sol)
+
+Como mencionamos los costos por mandar mensajes por Scroll es bastante bajo, aqui un screen shot mostrando algunos costos por transaccion los cuales no suelen ser mayores de 0.0008 dolares.
+
+<img src="https://i.ibb.co/7N4GWfH/New-Project-2.png">
 
 # Taiko:
 
+Scroll tiene un beneficio muy grande para nuestra aplicacion de X-Chat, ya que al utilizarla pudimos obtener velocidades presumibles de 3 segundos entre mensaje y mensaje, ademas de poder mandar rapidamente USDC sobre la misma red rapidamente.
 
+<img src="https://i.ibb.co/ry2w8RZ/image.png">
+
+- X-Chat Address:
+  - Scroll Explorer Contract Address: [0x5589Ca69a02277af6019e6007D876095F1320F28](https://blockscout.scroll.io/address/0x5589Ca69a02277af6019e6007D876095F1320F28)
+- Contract File: [FILE](./Contracts/Xchat-onchain.sol)
+
+Como mencionamos los costos por mandar mensajes por Scroll es bastante bajo, aqui un screen shot mostrando algunos costos por transaccion los cuales no suelen ser mayores de 0.0008 dolares.
+
+<img src="https://i.ibb.co/7N4GWfH/New-Project-2.png">
 
 # Current state and what's next:
 
