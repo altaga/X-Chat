@@ -32,8 +32,13 @@ X-Chat Wallet/Dapp APK: [LINK](./Xchat-APK/app-release.apk)
 
 # Introduction and Problem:
 
-In the world of blockchain technology, interoperability between different chains has always been a challenge. But with X-Chat, we have created a solution that enables users to seamlessly communicate and transact across various chains.
+Hello and welcome to X-Chat (Cross Chat), the revolutionary Dapp that allows you to chat and send assets across EVM and ZK compatible chains.
 
+While we were looking for a problem to hack we saw that in almost every single one of the EVMs and rollups in the Ethereum ecosystem there was an inherent need to create a UI and protocol for address to address messaging within each one of these chains
+
+<img src="https://i.ibb.co/6XfPzF6/article1.jpg">
+
+In the world of blockchain technology, interoperability between different chains has always been a challenge. But with X-Chat, we have created a solution that enables users to seamlessly communicate and transact across various chains.
 Whether you're an investor looking to move assets between different chains or a developer building a dapp that requires cross-chain communication, X-Chat has got you covered.
 
 # Solution:
@@ -46,73 +51,73 @@ So, whether you're a seasoned blockchain enthusiast or new to the world of decen
 
 <img src="https://i.ibb.co/Cm6xn5P/Untitled-Diagram-drawio-2.png">
 
-Todos los mensajes, assets y archivos que se mandan de una chain a otra son mandados mediante la funcion xcall en el contrato desplegado en la chain origen, el cual pasa a la red de Connext para que lleguen al xReciever en el contrato desplegado en la chain destino, los mensajes, assets y achivos que van dentro de una misma chain llaman al contrato propio de esa chain, en este caso las chains que no son compatibles con connext tienen su propio contrato sin xcall ni xReciever.
+All messages, assets and files that are sent from one chain to another are sent through the xcall function in the contract deployed in the origin chain, which is passed to the Connext network to reach the xReciever in the contract deployed in the destination chain. The messages, assets and files that go within the same chain call the own contract of that chain, in this case the chains that are not compatible with connext have their own contract without xcall or xReciever.
 
-- Connext:
-  - Envio de mensajes cross chain.
-    - Mediante los comandos xcall y xReciever del SDK en nuestro [Smart contract](Contracts/Xchat-crosschain.sol).
-  - Envio de USDC cross chain.
-    - Mediante el comando xTransfer del SDK implementado en nuestro [Smart contract](Contracts/Xchat-crosschain.sol).
+- Connect:
+   - Sending cross chain messages.
+     - Using the xcall and xReciever commands of the SDK in our [Smart contract](Contracts/Xchat-crosschain.sol).
+   - Sending USDC cross chain.
+     - Through the xTransfer command of the SDK implemented in our [Smart contract](Contracts/Xchat-crosschain.sol).
 - Gnosis
-  - Envio de mensajes, archivos y USDC a todas las chains compatibles con Connext.
-  - X-Chat Address:
-    - Gnosis Explorer Contract Address: [0x4B50927d34b94Da4cD23c34c7Ce0a77469273fCE](https://gnosisscan.io/address/0x4B50927d34b94Da4cD23c34c7Ce0a77469273fCE)
-  - Contract File: [FILE](./Contracts/Xchat-crosschain.sol)
-- Optimism:
-  - Envio de mensajes, archivos y USDC a todas las chains compatibles con Connext.
-  - X-Chat Address:
-    - Optimism Explorer Contract Address: [0x423dB5c61bf3a0D140D8b2cDEe83617A32e56471](https://optimistic.etherscan.io/address/0x423dB5c61bf3a0D140D8b2cDEe83617A32e56471)
-  - Contract File: [FILE](./Contracts/Xchat-crosschain.sol)
-- Polygon
-  - Envio de mensajes, archivos y USDC a todas las chains compatibles con Connext.
-  - X-Chat Address:
-    - Polygon Explorer Contract Address: [0xb3112D34958e6Fe3aeC0052b7d845f396aE22049](https://polygonscan.com/address/0xb3112D34958e6Fe3aeC0052b7d845f396aE22049)
-  - Contract File: [FILE](./Contracts/Xchat-crosschain.sol)
+   - Sending messages, files and USDC to all chains compatible with Connext.
+   - X-Chat Address:
+     - Gnosis Explorer Contract Address: [0x4B50927d34b94Da4cD23c34c7Ce0a77469273fCE](https://gnosisscan.io/address/0x4B50927d34b94Da4cD23c34c7Ce0a77469273fCE)
+   - Contract File: [FILE](./Contracts/Xchat-crosschain.sol)
+-Optimism:
+   - Sending messages, files and USDC to all chains compatible with Connext.
+   - X-Chat Address:
+     - Optimism Explorer Contract Address: [0x423dB5c61bf3a0D140D8b2cDEe83617A32e56471](https://optimistic.etherscan.io/address/0x423dB5c61bf3a0D140D8b2cDEe83617A32e56471)
+   - Contract File: [FILE](./Contracts/Xchat-crosschain.sol)
+-Polygon
+   - Sending messages, files and USDC to all chains compatible with Connext.
+   - X-Chat Address:
+     - Polygon Explorer Contract Address: [0xb3112D34958e6Fe3aeC0052b7d845f396aE22049](https://polygonscan.com/address/0xb3112D34958e6Fe3aeC0052b7d845f396aE22049)
+   - Contract File: [FILE](./Contracts/Xchat-crosschain.sol)
 - Arbitrum
-  - Envio de mensajes, archivos y USDC a todas las chains compatibles con Connext.
-  - X-Chat Address:
-    - Arbitrum Explorer Contract Address: [0x423dB5c61bf3a0D140D8b2cDEe83617A32e56471](https://arbiscan.io/address/0x423dB5c61bf3a0D140D8b2cDEe83617A32e56471)
-  - Contract File: [FILE](./Contracts/Xchat-crosschain.sol)
-- BNB:
-  - Envio de mensajes, archivos y USDC a todas las chains compatibles con Connext.
-  - X-Chat Address:
-    - BNB Explorer Contract Address:[0x423dB5c61bf3a0D140D8b2cDEe83617A32e56471](https://bscscan.com/address/0x423dB5c61bf3a0D140D8b2cDEe83617A32e56471)
-  - Contract File: [FILE](./Contracts/Xchat-crosschain.sol)
-- Scroll
-  - Envio de mensajes, archivos y USDC a la misma chain segura y eficiente gracias al ZK incorporado en la red.
-  - X-Chat Address:
-    - Scroll Explorer Contract Address:[0x5589Ca69a02277af6019e6007D876095F1320F28](https://blockscout.scroll.io/address/0x5589Ca69a02277af6019e6007D876095F1320F28)
-  - Contract File: [FILE](./Contracts/Xchat-onchain.sol)
-- Taiko
-  - Envio de mensajes, archivos y USDC a la misma chain segura y eficiente gracias al ZK incorporado en la red.
-  - X-Chat Address:
-    - Taiko Explorer Contract Address:[0x512Db9Ac59639AccEB521918cdFbdEA49a0A6A73](https://explorer.a2.taiko.xyz/address/0x512Db9Ac59639AccEB521918cdFbdEA49a0A6A73)
-  - Contract File: [FILE](./Contracts/Xchat-onchain.sol)
+   - Sending messages, files and USDC to all chains compatible with Connext.
+   - X-Chat Address:
+     - Arbitrum Explorer Contract Address: [0x423dB5c61bf3a0D140D8b2cDEe83617A32e56471](https://arbiscan.io/address/0x423dB5c61bf3a0D140D8b2cDEe83617A32e56471)
+   - Contract File: [FILE](./Contracts/Xchat-crosschain.sol)
+-BNB:
+   - Sending messages, files and USDC to all chains compatible with Connext.
+   - X-Chat Address:
+     - BNB Explorer Contract Address:[0x423dB5c61bf3a0D140D8b2cDEe83617A32e56471](https://bscscan.com/address/0x423dB5c61bf3a0D140D8b2cDEe83617A32e56471)
+   - Contract File: [FILE](./Contracts/Xchat-crosschain.sol)
+-Scroll
+   - Sending messages, files and USDC to the same secure and efficient chain thanks to the ZK incorporated into the network.
+   - X-Chat Address:
+     - Scroll Explorer Contract Address:[0x5589Ca69a02277af6019e6007D876095F1320F28](https://blockscout.scroll.io/address/0x5589Ca69a02277af6019e6007D876095F1320F28)
+   - Contract File: [FILE](./Contracts/Xchat-onchain.sol)
+-Taiko
+   - Sending messages, files and USDC to the same secure and efficient chain thanks to the ZK incorporated into the network.
+   - X-Chat Address:
+     - Taiko Explorer Contract Address:[0x512Db9Ac59639AccEB521918cdFbdEA49a0A6A73](https://explorer.a2.taiko.xyz/address/0x512Db9Ac59639AccEB521918cdFbdEA49a0A6A73)
+   - Contract File: [FILE](./Contracts/Xchat-onchain.sol)
 - Mantle:
-  - Envio de mensajes, archivos y USDC a la misma chain segura y eficiente gracias al ZK incorporado en la red.
-  - X-Chat Address:
-    - Mantle Explorer Contract Address:[0x512Db9Ac59639AccEB521918cdFbdEA49a0A6A73](https://explorer.testnet.mantle.xyz/address/0x512Db9Ac59639AccEB521918cdFbdEA49a0A6A73)
-  - Contract File: [FILE](./Contracts/Xchat-onchain.sol)
+   - Sending messages, files and USDC to the same secure and efficient chain thanks to the ZK incorporated into the network.
+   - X-Chat Address:
+     - Mantle Explorer Contract Address:[0x512Db9Ac59639AccEB521918cdFbdEA49a0A6A73](https://explorer.testnet.mantle.xyz/address/0x512Db9Ac59639AccEB521918cdFbdEA49a0A6A73)
+   - Contract File: [FILE](./Contracts/Xchat-onchain.sol)
 - ChainSafe (Filecoin):
-  - Subida de archivos a IPFS atravez de Chainsafe API.
+   - Upload files to IPFS through Chainsafe API.
 
 # X-Chat React Natve DApp:
 
-X-Chat es una Dapp muy completa, que nos provee todos los servicios de wallet y de chat. Sin mencionar su capacidad de realizar operaciones crosschain.
+X-Chat is a very complete Dapp, which provides us with all the wallet and chat services. Not to mention its ability to perform crosschain operations.
 
 <img src="https://i.ibb.co/LQBLQNn/screen1.png">
 
-Dentro de las capacidades crosschain, la mas importante a nuestra consideracion es el hecho de poder mandar los mensajes de chat de una chain a otra y a su vez poder transferir ERC20 tokens sin ninguna dificultad gracias a nuestra sencilla UI y los servicios de Connext.
+Within the crosschain capabilities, the most important in our opinion is the fact of being able to send chat messages from one chain to another and in turn being able to transfer ERC20 tokens without any difficulty thanks to our simple UI and Connext services.
 
 <img src="https://i.ibb.co/6HBCzZ4/screen2.png">
 
-Por ultimo pensando en el rendimiento de la app, se procuro un diseño sencillo que pudiera correr facilmente en celulares desde alta gama, hasta gama intermedia baja.
+Finally, thinking about the performance of the app, a simple design was sought that could easily run on cell phones from high-end to low-intermediate range.
 
 <img src="https://i.ibb.co/x37YKM0/screenshot.png">
 
 # Connext:
 
-Todas las transacciones que requieren comunicarse de una chain a otra usan the [Connext SDK](https://www.npmjs.com/package/@connext/smart-contracts) esta implementacion esta en el contrato [Xchat-crosschain](Contracts/Xchat-crosschain.sol).
+All transactions that require communication from one chain to another use the [Connext SDK](https://www.npmjs.com/package/@connext/smart-contracts) this implementation is in the contract [Xchat-crosschain](Contracts/Xchat-crosschain.sol).
 
 <img src="https://i.ibb.co/8d52WsP/scheme-drawio-2.png">
 
@@ -286,7 +291,10 @@ Aqui algunos screenhots de nuestra UI y como mandamos mensajes, archivos y mostr
 
 # Current state and what's next:
 
-TO DO...
+With our user-friendly interface and cutting-edge technology, X-Chat offers a secure and efficient way to chat and transact across chains. Our platform is built on the latest blockchain infrastructure, ensuring fast and reliable transactions at all times.
+So, whether you're a seasoned blockchain enthusiast or new to the world of decentralized applications, X-Chat is the perfect platform for you to connect with others and explore the endless possibilities of the blockchain ecosystem.
+Thank you for reading!
+
 
 # Team:
 
