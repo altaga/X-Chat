@@ -220,13 +220,17 @@ En las siguientes pantallas de nuestra app, podemos ver el costo por mensaje den
 
 # Scroll:
 
-Scroll tiene un beneficio muy grande para nuestra aplicacion de X-Chat, ya que al utilizarla pudimos obtener velocidades presumibles de 3 segundos entre mensaje y mensaje.
+Scroll tiene un beneficio muy grande para nuestra aplicacion de X-Chat, ya que al utilizarla pudimos obtener velocidades presumibles de 3 segundos entre mensaje y mensaje, ademas de poder mandar rapidamente USDC sobre la misma red rapidamente.
 
 <img src="https://i.ibb.co/ry2w8RZ/image.png">
 
 - X-Chat Address:
   - Scroll Explorer Contract Address: [0x5589Ca69a02277af6019e6007D876095F1320F28](https://blockscout.scroll.io/address/0x5589Ca69a02277af6019e6007D876095F1320F28)
 - Contract File: [FILE](./Contracts/Xchat-onchain.sol)
+
+Como mencionamos los costos por mandar mensajes por Scroll es bastante bajo, aqui un screen shot mostrando algunos costos por transaccion los cuales no suelen ser mayores de 0.0008 dolares.
+
+<img src="https://i.ibb.co/7N4GWfH/New-Project-2.png">
 
 # Optimism:
 
