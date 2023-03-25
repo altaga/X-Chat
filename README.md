@@ -34,6 +34,8 @@ Connext: [Click Here](#connext)
 
 <img src="https://i.ibb.co/Cm6xn5P/Untitled-Diagram-drawio-2.png">
 
+Todos los mensajes, assets y archivos que se mandan de una chain a otra son mandados mediante xcall desde la chain origen a la red de Connext para que lleguen al xReciever en la chain destino, los mensajes, assets y achivos que van dentro de una misma chain llaman al mismo contrato.
+
 - Connext:
   - Envio de mensajes cross chain.
     - Mediante los comandos xcall y xReciever del SDK en nuestro [Smart contract](Contracts/Xchat-crosschain.sol).
