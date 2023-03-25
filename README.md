@@ -248,17 +248,17 @@ Algo muy resaltable de Optimism fue los costos por transaccion que nos ofrecia p
 
 # Mantle:
 
-Scroll tiene un beneficio muy grande para nuestra aplicacion de X-Chat, ya que al utilizarla pudimos obtener velocidades presumibles de 3 segundos entre mensaje y mensaje, ademas de poder mandar rapidamente USDC sobre la misma red rapidamente.
+La red de Mantle nos ofrecio una arquitectura con bajas fees y alta seguridad, apesar de aun ser Testnet y tener gas fees bajas para el momento de subir este proyecto, fue una red que nos ofrecio buena velocidad de transaccion y completa compatibilidad para desplegar nuestro contrato en ella, funcionando perfectamente, logrando mandar WETH tokens, mensajes y achivos.
 
-<img src="https://i.ibb.co/ry2w8RZ/image.png">
+<img src="https://i.ibb.co/5c8pGnd/image.png">
 
 - X-Chat Address:
-  - Scroll Explorer Contract Address: [0x5589Ca69a02277af6019e6007D876095F1320F28](https://blockscout.scroll.io/address/0x5589Ca69a02277af6019e6007D876095F1320F28)
-- Contract File: [FILE](./Contracts/Xchat-onchain.sol)
+    - Mantle Explorer Contract Address:[0x512Db9Ac59639AccEB521918cdFbdEA49a0A6A73](https://explorer.testnet.mantle.xyz/address/0x512Db9Ac59639AccEB521918cdFbdEA49a0A6A73)
+  - Contract File: [FILE](./Contracts/Xchat-onchain.sol)
 
-Como mencionamos los costos por mandar mensajes por Scroll es bastante bajo, aqui un screen shot mostrando algunos costos por transaccion los cuales no suelen ser mayores de 0.0008 dolares.
+La red nos ofrecio buena velocidad al mandar mensajes y un costo muy bajo en las trasacciones 
 
-<img src="https://i.ibb.co/7N4GWfH/New-Project-2.png">
+<img src="https://i.ibb.co/y8MP1dk/New-Project-4.png">
 
 # Taiko:
 
