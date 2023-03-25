@@ -289,6 +289,10 @@ Here are some screenshots of our UI and how we send messages, files and show the
 
 <img src="https://i.ibb.co/BtQhF0z/New-Project-5.png">
 
+# Polygon
+
+
+
 # Current state and what's next:
 
 With our user-friendly interface and cutting-edge technology, X-Chat offers a secure and efficient way to chat and transact across chains. Our platform is built on the latest blockchain infrastructure, ensuring fast and reliable transactions at all times.
