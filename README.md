@@ -211,7 +211,7 @@ Later, when calling xcall, it will send this information from the source chain t
         return "ok";
     }
 
-Finally, the communication can be summarized in the following scheme.
+Finally, the communication can be summarized in the following schematic.
 
 <img src="https://i.ibb.co/hRbqbgy/scheme-Connext-drawio.png">
 
