@@ -121,7 +121,7 @@ All transactions that require communication from one chain to another use the [C
 
 <img src="https://i.ibb.co/8d52WsP/scheme-drawio-2.png">
 
-Antes de mandar el mensaje, tenemos que obtener un relayerFee el cual tenemos que mandar como value dentro de nuestra transaccion para que la transferencia se exitosa, el script para obtener el relayer fee es el siguiente.
+Before sending the message, we have to obtain a relayerFee which we have to send as a value within our transaction for the transfer to be successful, the script to obtain the relayer fee is as follows.
 
     const sdkConfig = {
             network: "mainnet",
@@ -161,7 +161,7 @@ Antes de mandar el mensaje, tenemos que obtener un relayerFee el cual tenemos qu
             return("0")
         }
 
-El flujo de envio del mensaje es llamar la funcion sendMessageX desde el contrato desplegado en la chain de origen.
+The flow of sending the message is to call the sendMessageX function from the contract displayed in the source chain.
 
     function sendMessageX(
         address target,
@@ -190,7 +190,7 @@ El flujo de envio del mensaje es llamar la funcion sendMessageX desde el contrat
         );
     }
 
-Posteriormente al llamar a xcall mandara esta informacion desde la chain origen a la chain destino, la cual tiene implementado en su propio contrato un xReciever, el cual procesara la llamada y en nuestro caso agregara el mensaje a el historial.
+Later, when calling xcall, it will send this information from the source chain to the destination chain, which has an xReciever implemented in its own contract, which will process the call and, in our case, will add the message to the history.
 
     function xReceive(
         bytes32 _transferId,
@@ -211,17 +211,17 @@ Posteriormente al llamar a xcall mandara esta informacion desde la chain origen 
         return "ok";
     }
 
-Finalmente la comunicacion puede resumirse en el siguiente esquema.
+Finally, the communication can be summarized in the following scheme.
 
 <img src="https://i.ibb.co/hRbqbgy/scheme-Connext-drawio.png">
 
-Todas las transacciones que mostramos en los demos pueden revisarlas en el Connext Explorer.
+All the transactions that we show in the demos can be reviewed in the Connext Explorer.
 
 https://connextscan.io/address/0x2A9EF6632842f2FB3da32Ac0A558B3b7062C0F13
 
 # Gnosis:
 
-En nuestro desarrollo utilizamos Gnosis MAINNET, ya que permite a nuestra aplicacion tener una layer segura y con una token nativa estable, en este caso el xDai, para nuestra aplicacion es muy benefico poder mantener las tarrifas bajas al mandar mensajes o USDC tokens desde Gnosis a cualquiera de las otras chains en Connext o a la misma chain.
+In our development we use the Gnosis MAINNET, since it allows our application to have a secure layer and with a stable native token, in this case xDai, for our application it is very beneficial to be able to keep fees low when sending messages or USDC tokens from Gnosis to any of the other chains in Connext or to the same chain.
 
 <img src="https://i.ibb.co/G2DPP8y/image.png">
 
@@ -229,13 +229,13 @@ En nuestro desarrollo utilizamos Gnosis MAINNET, ya que permite a nuestra aplica
   - Gnosis Explorer Contract Address:  [0x4B50927d34b94Da4cD23c34c7Ce0a77469273fCE](https://gnosisscan.io/address/0x4B50927d34b94Da4cD23c34c7Ce0a77469273fCE)
 - Contract File: [FILE](./Contracts/Xchat-crosschain.sol)
 
-En las siguientes pantallas de nuestra app, podemos ver el costo por mensaje dentro de la misma chain es menor a 1 centavo de dolar y 6 centavos en una transaccion crosschain con polygon.
+In the following screens of our app, we can see the cost per message within the same chain is less than 1 cent and 6 cents in a crosschain transaction with polygon.
 
 <img src="https://i.ibb.co/JtWSxpd/New-Project-1.png">
 
 # Scroll:
 
-Scroll tiene un beneficio muy grande para nuestra aplicacion de X-Chat, ya que al utilizarla pudimos obtener velocidades presumibles de 3 segundos entre mensaje y mensaje, ademas de poder mandar rapidamente USDC sobre la misma red rapidamente.
+Scroll has a very big benefit for our X-Chat application, since using it we were able to obtain presumable speeds of 3 seconds between messages, in addition to being able to quickly send USDC over the same network quickly.
 
 <img src="https://i.ibb.co/ry2w8RZ/image.png">
 
@@ -243,13 +243,13 @@ Scroll tiene un beneficio muy grande para nuestra aplicacion de X-Chat, ya que a
   - Scroll Explorer Contract Address:  [0x5589Ca69a02277af6019e6007D876095F1320F28](https://blockscout.scroll.io/address/0x5589Ca69a02277af6019e6007D876095F1320F28)
 - Contract File: [FILE](./Contracts/Xchat-onchain.sol)
 
-Como mencionamos los costos por mandar mensajes por Scroll es bastante bajo, aqui un screen shot mostrando algunos costos por transaccion los cuales no suelen ser mayores de 0.0008 dolares.
+As we mentioned the costs for sending messages by Scroll are quite low, here is a screen shot showing some costs per transaction which are not usually greater than 0.0008 dollars.
 
 <img src="https://i.ibb.co/7N4GWfH/New-Project-2.png">
 
 # Optimism:
 
-Para la red de Optimism quisimos atacar un problema directamente que ellos bucan, que es el crear una UI y protocolo, para el address to address messaging y el contrato esta desplegado en MAINNET.
+For the Optimism network we wanted to attack a problem directly that they are looking for, which is creating a UI and protocol for address to address messaging and the contract is deployed on MAINNET.
 
 <img src="https://i.ibb.co/3sSnqNf/Whats-App-Image-2023-03-23-at-01-57-19.jpg">
 
@@ -257,13 +257,13 @@ Para la red de Optimism quisimos atacar un problema directamente que ellos bucan
   - Optimism MAINNET Explorer Contract Address: [0x423dB5c61bf3a0D140D8b2cDEe83617A32e56471](https://optimistic.etherscan.io/address/0x423dB5c61bf3a0D140D8b2cDEe83617A32e56471)
 - Contract File: [FILE](./Contracts/Xchat-crosschain.sol)
 
-Algo muy resaltable de Optimism fue los costos por transaccion que nos ofrecia para mandar los mensajes sobre la misma chain y crosschain, no superando los 0.0008 usd y los 0.0023 usd respectivamente.
+Something very remarkable about Optimism was the costs per transaction that it offered us to send messages on the same chain and crosschain, not exceeding 0.0008 usd and 0.0023 usd respectively.
 
 <img src="https://i.ibb.co/pnSVrrQ/New-Project-3.png">
 
 # Mantle:
 
-La red de Mantle nos ofrecio una arquitectura con bajas fees y alta seguridad, apesar de aun ser Testnet y tener gas fees bajas para el momento de subir este proyecto, fue una red que nos ofrecio buena velocidad de transaccion y completa compatibilidad para desplegar nuestro contrato en ella, funcionando perfectamente, logrando mandar WETH tokens, mensajes y achivos.
+The Mantle network offered us an architecture with low fees and high security, despite still being Testnet and having low gas fees at the time of uploading this project, it was a network that offered us good transaction speed and full compatibility to deploy our contract in it, working perfectly, managing to send WETH tokens, messages and files.
 
 <img src="https://i.ibb.co/5c8pGnd/image.png">
 
@@ -271,13 +271,13 @@ La red de Mantle nos ofrecio una arquitectura con bajas fees y alta seguridad, a
     - Mantle Explorer Contract Address: [0x512Db9Ac59639AccEB521918cdFbdEA49a0A6A73](https://explorer.testnet.mantle.xyz/address/0x512Db9Ac59639AccEB521918cdFbdEA49a0A6A73)
   - Contract File: [FILE](./Contracts/Xchat-onchain.sol)
 
-La red nos ofrecio buena velocidad al mandar mensajes y un costo muy bajo en las trasacciones 
+The network offered us good speed when sending messages and a very low cost in transactions. 
 
 <img src="https://i.ibb.co/y8MP1dk/New-Project-4.png">
 
 # Taiko:
 
-Para el uso de Taiko, se puso especial atencion en la UI/UX del proyecto, ya que es algo que muchas aplicaciones, cuando estan muy enfocadas en developers suelen carecer, asi que se procuro realizar una interfaz sencilla para poder mandar mensajes sobre la red de Taiko y a su vez uno de sus ERC20 Tokens BLL.
+For the use of Taiko, special attention was paid to the UI/UX of the project, since it is something that many applications, when they are very focused on developers, tend to lack, so we tried to make a simple interface to be able to send messages over the network. of Taiko and in turn one of its ERC20 Tokens BLL.
 
 <img src="https://i.ibb.co/N3NwBGR/image.png">
 
@@ -285,7 +285,7 @@ Para el uso de Taiko, se puso especial atencion en la UI/UX del proyecto, ya que
   - Taiko Explorer Contract Address: [0x512Db9Ac59639AccEB521918cdFbdEA49a0A6A73](https://explorer.a2.taiko.xyz/address/0x512Db9Ac59639AccEB521918cdFbdEA49a0A6A73)
 - Contract File: [FILE](./Contracts/Xchat-onchain.sol)
 
-Aqui algunos screenhots de nuestra UI y como mandamos mensajes, archivos y mostramos el balance de nuestra wallet.
+Here are some screenshots of our UI and how we send messages, files and show the balance of our wallet.
 
 <img src="https://i.ibb.co/BtQhF0z/New-Project-5.png">
 
