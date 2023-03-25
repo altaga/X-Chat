@@ -222,7 +222,7 @@ En las siguientes pantallas de nuestra app, podemos ver el costo por mensaje den
 
 Scroll tiene un beneficio muy grande para nuestra aplicacion de X-Chat, ya que al utilizarla pudimos obtener velocidades presumibles de 3 segundos entre mensaje y mensaje.
 
-<img src="https://i.ibb.co/G2DPP8y/image.png">
+<img src="https://i.ibb.co/ry2w8RZ/image.png">
 
 - X-Chat Address:
   - Scroll Explorer Contract Address: [0x5589Ca69a02277af6019e6007D876095F1320F28](https://blockscout.scroll.io/address/0x5589Ca69a02277af6019e6007D876095F1320F28)
