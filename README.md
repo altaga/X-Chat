@@ -102,6 +102,14 @@ X-Chat es una Dapp muy completa, que nos provee todos los servicios de wallet y 
 
 <img src="https://i.ibb.co/LQBLQNn/screen1.png">
 
+Dentro de las capacidades crosschain, la mas importante a nuestra consideracion es el hecho de poder mandar los mensajes de chat de una chain a otra y a su vez poder transferir ERC20 tokens sin ninguna dificultad gracias a nuestra sencilla UI y los servicios de Connext.
+
+<img src="https://i.ibb.co/6HBCzZ4/screen2.png">
+
+Por ultimo pensando en el rendimiento de la app, se procuro un diseño sencillo que pudiera correr facilmente en celulares desde alta gama, hasta gama intermedia baja.
+
+<img src="https://i.ibb.co/x37YKM0/screenshot.png">
+
 # Connext:
 
 Todas las transacciones que requieren comunicarse de una chain a otra usan the [Connext SDK](https://www.npmjs.com/package/@connext/smart-contracts) esta implementacion esta en el contrato [Xchat-crosschain](Contracts/Xchat-crosschain.sol).
