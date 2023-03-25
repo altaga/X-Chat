@@ -24,17 +24,22 @@ Connext: [Click Here](#connext)
 
 # Introduction and Problem:
 
+In the world of blockchain technology, interoperability between different chains has always been a challenge. But with X-Chat, we have created a solution that enables users to seamlessly communicate and transact across various chains.
 
+Whether you're an investor looking to move assets between different chains or a developer building a dapp that requires cross-chain communication, X-Chat has got you covered.
 
 # Solution:
 
+With our user-friendly interface and cutting-edge technology, X-Chat offers a secure and efficient way to chat and transact across chains. Our platform is built on the latest blockchain infrastructure, ensuring fast and reliable transactions at all times.
+
+So, whether you're a seasoned blockchain enthusiast or new to the world of decentralized applications, X-Chat is the perfect platform for you to connect with others and explore the endless possibilities of the blockchain ecosystem.
 
 
 # System's Architecture:
 
 <img src="https://i.ibb.co/Cm6xn5P/Untitled-Diagram-drawio-2.png">
 
-Todos los mensajes, assets y archivos que se mandan de una chain a otra son mandados mediante xcall desde la chain origen a la red de Connext para que lleguen al xReciever en la chain destino, los mensajes, assets y achivos que van dentro de una misma chain llaman al mismo contrato.
+Todos los mensajes, assets y archivos que se mandan de una chain a otra son mandados mediante la funcion xcall en el contrato desplegado en la chain origen, el cual pasa a la red de Connext para que lleguen al xReciever en el contrato desplegado en la chain destino, los mensajes, assets y achivos que van dentro de una misma chain llaman al contrato propio de esa chain, en este caso las chains que no son compatibles con connext tienen su propio contrato sin xcall ni xReciever.
 
 - Connext:
   - Envio de mensajes cross chain.
